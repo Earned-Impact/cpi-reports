@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPI Monthly Report - August 28, 2026</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #131315;
+        background: #f0f0f0;
+        padding: 32px 16px;
+      }
+      .page {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Cards */
+      .card {
+        background: #ffffff;
+        border-radius: 12px;
+        border-left: 3px solid #ff70db;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        margin-bottom: 24px;
+        padding: 32px;
+        page-break-inside: avoid;
+      }
+      .card-header {
+        border-left: none;
+        padding: 32px 32px 24px;
+      }
+
+      /* Header */
+      .header-logo {
+        margin-bottom: 16px;
+      }
+      .header-client {
+        font-family: "DM Serif Display", serif;
+        font-size: 28px;
+        color: #131315;
+        margin-bottom: 4px;
+      }
+      .header-type {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        color: #909da3;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+      .header-date {
+        font-family: "Roboto Mono", monospace;
+        font-size: 13px;
+        color: #909da3;
+      }
+      .header-line {
+        border: none;
+        border-top: 3px solid #ff70db;
+        margin-top: 20px;
+      }
+
+      /* Section titles */
+      h2 {
+        font-family: "DM Serif Display", serif;
+        font-size: 22px;
+        color: #131315;
+        margin-bottom: 16px;
+      }
+      h3 {
+        font-family: "DM Serif Display", serif;
+        font-size: 17px;
+        color: #131315;
+        margin-bottom: 12px;
+        margin-top: 24px;
+      }
+      h3:first-of-type {
+        margin-top: 0;
+      }
+
+      /* Labels */
+      .label {
+        font-family: "Roboto Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #909da3;
+      }
+
+      /* Stat grid */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .stat-box {
+        background: #f0f0f0;
+        border-radius: 8px;
+        padding: 16px;
+      }
+      .stat-box .stat-value {
+        font-family: "DM Serif Display", serif;
+        font-size: 26px;
+        color: #131315;
+        line-height: 1.1;
+      }
+      .stat-box .stat-label {
+        font-family: "Roboto Mono", monospace;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #909da3;
+        margin-bottom: 4px;
+      }
+      .stat-box .stat-sub {
+        font-family: "Roboto Mono", monospace;
+        font-size: 10px;
+        color: #909da3;
+        margin-top: 4px;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+      th {
+        text-align: left;
+        font-family: "Roboto Mono", monospace;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #909da3;
+        border-bottom: 2px solid #f0f0f0;
+        padding: 8px 10px;
+      }
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #f0f0f0;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* Tags */
+      .tag {
+        display: inline-block;
+        font-family: "Roboto Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .tag-search {
+        background: #e8f0fe;
+        color: #1a73e8;
+      }
+      .tag-meta {
+        background: #e7f3ff;
+        color: #1877f2;
+      }
+
+      /* Note boxes */
+      .note-box {
+        background: #f8f8f8;
+        border-left: 3px solid #ff70db;
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+        margin: 16px 0;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .note-box ul {
+        padding-left: 18px;
+        margin: 0;
+      }
+      .note-box li {
+        margin-bottom: 6px;
+      }
+
+      /* Status colors */
+      .status-ongoing {
+        color: #f35f36;
+        font-weight: 600;
+      }
+      .status-action {
+        color: #2079a0;
+        font-weight: 600;
+      }
+      .status-good {
+        color: #1e8e3e;
+        font-weight: 600;
+      }
+
+      /* Highlight cell */
+      .highlight {
+        background: #e8f0fe;
+        font-weight: 600;
+        border-radius: 3px;
+      }
+      .highlight-good {
+        background: #e6f4ea;
+        font-weight: 600;
+        border-radius: 3px;
+      }
+      .highlight-warn {
+        background: #fef3f2;
+        font-weight: 600;
+        border-radius: 3px;
+      }
+
+      /* Section divider */
+      .section-divider {
+        border: none;
+        border-top: 1px solid #f0f0f0;
+        margin: 24px 0;
+      }
+
+      /* Paragraph spacing */
+      p {
+        margin-bottom: 12px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      ul {
+        padding-left: 20px;
+        margin-bottom: 12px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+
+      /* Link styling */
+      a {
+        color: #2079a0;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Print */
+      @media print {
+        body {
+          background: #fff;
+          padding: 0;
+        }
+        .card {
+          box-shadow: none;
+          border: 1px solid #eee;
+          page-break-inside: avoid;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .stat-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- HEADER -->
+      <div class="card card-header">
+        <div class="header-logo">
+          <svg
+            preserveAspectRatio="xMidYMid meet"
+            overflow="visible"
+            style="display: block; width: 48px; height: 48px"
+            viewBox="0 0 95.1219 94.794"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Group">
+              <path
+                id="Vector"
+                d="M71.3443 0.000195313H74.6538C85.9545 0.000195313 95.1219 9.13708 95.1219 20.4002V74.394C95.1219 85.6571 85.9545 94.794 74.6538 94.794H71.3443V0.000195313Z"
+                fill="#131315"
+              />
+              <path
+                id="Vector_2"
+                d="M59.4555 22.3882V1.32169C59.4555 0.597633 58.8674 0 58.1294 0H23.7776C10.6434 0 0 10.608 0 23.6984V71.0953C0 84.1858 10.6434 94.7938 23.7776 94.7938H58.1294C58.8558 94.7938 59.4555 94.2076 59.4555 93.4721V72.4055C59.4555 71.6815 58.8674 71.0838 58.1294 71.0838H25.1037C24.3772 71.0838 23.7776 70.4977 23.7776 69.7621V60.5448C23.7776 59.8208 24.3657 59.2231 25.1037 59.2231H58.1294C58.8558 59.2231 59.4555 58.637 59.4555 57.9014V36.8349C59.4555 36.1108 58.8674 35.5132 58.1294 35.5132H25.1037C24.3772 35.5132 23.7776 34.927 23.7776 34.1915V24.9742C23.7776 24.2501 24.3657 23.6525 25.1037 23.6525H58.1294C58.8558 23.6525 59.4555 23.0663 59.4555 22.3308V22.3882Z"
+                fill="#131315"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="header-client">Chicago Psychoanalytic Institute</div>
+        <div class="header-type">Monthly Report</div>
+        <div class="header-date">
+          August 28, 2026 &nbsp;|&nbsp; Prepared by Earned Impact
+        </div>
+        <hr class="header-line" />
+      </div>
+
+      <!-- WEBSITE TRAFFIC OVERVIEW -->
+      <div class="card">
+        <h2>Website Traffic Overview</h2>
+        <p class="label" style="margin-bottom: 16px">
+          Google Analytics &nbsp;|&nbsp; August 1 to 28, 2026
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-label">Total Sessions</div>
+            <div class="stat-value">25,830</div>
+            <div class="stat-sub">vs. 25,291 in July</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Engaged Sessions</div>
+            <div class="stat-value">11,949</div>
+            <div class="stat-sub">46.26% engagement rate</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Total Events</div>
+            <div class="stat-value">151.8K</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Avg. Engagement Time</div>
+            <div class="stat-value">45s</div>
+          </div>
+        </div>
+
+        <h3>Traffic by Channel</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Channel</th>
+              <th>Sessions</th>
+              <th>% of Total</th>
+              <th>Engagement Rate</th>
+              <th>Avg. Time</th>
+              <th>Events/Session</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Organic Search</strong></td>
+              <td class="highlight-good">14,503</td>
+              <td class="highlight-good">56.15%</td>
+              <td>65.55%</td>
+              <td>1m 07s</td>
+              <td>6.12</td>
+            </tr>
+            <tr>
+              <td>Direct</td>
+              <td>9,798</td>
+              <td>37.93%</td>
+              <td>18.39%</td>
+              <td>13s</td>
+              <td>5.26</td>
+            </tr>
+            <tr>
+              <td>Paid Other</td>
+              <td>434</td>
+              <td>1.68%</td>
+              <td>20.28%</td>
+              <td>4s</td>
+              <td>3.47</td>
+            </tr>
+            <tr>
+              <td><strong>Paid Search</strong></td>
+              <td>403</td>
+              <td>1.56%</td>
+              <td class="highlight-good">65.26%</td>
+              <td class="highlight-good">1m 20s</td>
+              <td class="highlight-good">13.27</td>
+            </tr>
+            <tr>
+              <td>Referral</td>
+              <td>223</td>
+              <td>0.86%</td>
+              <td>52.91%</td>
+              <td>55s</td>
+              <td>7.42</td>
+            </tr>
+            <tr>
+              <td><strong>Organic Social</strong></td>
+              <td>196</td>
+              <td>0.76%</td>
+              <td>58.67%</td>
+              <td>32s</td>
+              <td>6.41</td>
+            </tr>
+            <tr>
+              <td>AI Assistant</td>
+              <td class="highlight-good">122</td>
+              <td>0.47%</td>
+              <td class="highlight-good">60.66%</td>
+              <td>48s</td>
+              <td>7.93</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="note-box">
+          <p>
+            August traffic has already <strong>surpassed July</strong>, reaching
+            25,830 sessions compared to July's 25,291 total, with three days
+            still remaining in the month. The site continues to grow
+            month-over-month.
+          </p>
+          <p>
+            <strong>Organic Search</strong> remains the dominant traffic driver
+            at 56% of all sessions with a 65.55% engagement rate, consistent
+            with July. The SEO content strategy continues to compound, bringing
+            in high-quality visitors who engage deeply with CPI content.
+          </p>
+          <p>
+            <strong>Paid Search</strong> is the highest-quality channel on the
+            site. Visitors from Google Ads engage at 65.26%, spend 1m 20s per
+            session, and trigger 13.27 events per visit (up from 12.56 in July).
+            These are intent-driven visitors actively exploring services and
+            taking action.
+          </p>
+          <p>
+            <strong>AI Assistant</strong> traffic has grown to 122 sessions, up
+            34% from July's 91. With a 60.66% engagement rate, CPI content
+            continues to surface in AI-powered search tools, and those visitors
+            engage more deeply than most other channels.
+          </p>
+        </div>
+      </div>
+
+      <!-- PERFORMANCE MARKETING: GOOGLE ADS -->
+      <div class="card">
+        <h2>Google Ads</h2>
+        <p class="label" style="margin-bottom: 16px">August 1 to 28, 2026</p>
+
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-label">Total Spend</div>
+            <div class="stat-value">$1,314</div>
+            <div class="stat-sub">28 days</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Conversions</div>
+            <div class="stat-value">19</div>
+            <div class="stat-sub">$69.18 per conversion</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Impressions</div>
+            <div class="stat-value">6.4K</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Total Clicks</div>
+            <div class="stat-value">530</div>
+          </div>
+        </div>
+
+        <h3>Campaign Breakdown</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Spend</th>
+              <th>Clicks</th>
+              <th>Conversions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Search - Adult Therapy Services
+                <span class="tag tag-search" style="margin-left: 6px"
+                  >Search</span
+                >
+              </td>
+              <td>$871.63</td>
+              <td>357</td>
+              <td class="highlight-good">13</td>
+            </tr>
+            <tr>
+              <td>
+                Child &amp; Adolescent Therapy
+                <span class="tag tag-search" style="margin-left: 6px"
+                  >Search</span
+                >
+              </td>
+              <td>$442.81</td>
+              <td>173</td>
+              <td class="highlight-good">6</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="note-box">
+          <p>
+            August is the first full month with budgets running at normal levels
+            since the earlier payment disruption, and the results show strong
+            performance. The campaigns delivered
+            <strong>19 conversions at $69.18 each</strong> across both
+            campaigns.
+          </p>
+          <p>
+            <strong>Adult Therapy Services</strong> led with 13 conversions at
+            $67.05 per conversion, while
+            <strong>Child &amp; Adolescent Therapy</strong> contributed 6
+            conversions at $73.80 per conversion. The Child &amp; Adolescent
+            campaign has seen a significant increase in click volume, with
+            clicks nearly doubling compared to the prior period as we expanded
+            into parent-focused and adolescent-specific keyword groups.
+          </p>
+        </div>
+
+        <h3>Top Keywords</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Keyword</th>
+              <th>Cost</th>
+              <th>Clicks</th>
+              <th>CTR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>"therapist Chicago"</td>
+              <td>$331.06</td>
+              <td>80</td>
+              <td>7.98%</td>
+            </tr>
+            <tr>
+              <td>"stress management therapy"</td>
+              <td>$209.59</td>
+              <td>33</td>
+              <td>3.32%</td>
+            </tr>
+            <tr>
+              <td>"psychotherapy Chicago"</td>
+              <td>$105.72</td>
+              <td>22</td>
+              <td>6.69%</td>
+            </tr>
+            <tr>
+              <td>"Chicago psychoanalytic institute"</td>
+              <td>$65.66</td>
+              <td class="highlight">145</td>
+              <td class="highlight">38.67%</td>
+            </tr>
+            <tr>
+              <td>"psychoanalysis chicago"</td>
+              <td>$54.27</td>
+              <td class="highlight">63</td>
+              <td class="highlight">23.95%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="note-box">
+          <p>
+            "Therapist Chicago" remains the top-spend keyword, delivering 80
+            clicks at 7.98% CTR. The branded term "Chicago psychoanalytic
+            institute" stands out with
+            <strong>145 clicks at a 38.67% CTR</strong>, the highest
+            click-through rate in the account by far. "Psychoanalysis chicago"
+            also continues to perform well at 23.95% CTR with 63 clicks. This
+            strong branded search demand signals growing awareness and intent
+            for CPI's core services.
+          </p>
+        </div>
+
+        <h3>Device Insights</h3>
+        <p>
+          <strong>Mobile</strong> captures 92.6% of ad spend ($1,217) and drives
+          <strong>nearly 100% of conversions</strong> (19 of 19). Desktop
+          accounts for 7.1% of spend but 36.2% of clicks (192), suggesting
+          desktop users click through from ads but are less likely to convert.
+          This is consistent with a pattern where mobile users searching for
+          therapy services are more likely to take immediate action (call or
+          submit a form) from their phone.
+        </p>
+
+        <h3>Quarterly Account Audit</h3>
+        <div class="note-box">
+          <p>
+            A <strong>quarterly account audit</strong> is currently in progress.
+            This deeper dive into the Google Ads account reviews bid strategies,
+            keyword performance, ad copy, negative keywords, and budget
+            allocation to identify optimization opportunities. Current
+            optimization scores are 59.7% (Adult Therapy) and 61.6% (Child &amp;
+            Adolescent), indicating room for improvement that the audit will
+            address. Recommendations will be shared in the next report.
+          </p>
+        </div>
+      </div>
+
+      <!-- PERFORMANCE MARKETING: META -->
+      <div class="card">
+        <h2>Meta (Facebook) Ads</h2>
+        <p class="label" style="margin-bottom: 16px">
+          August 1 to 28, 2026 &nbsp;|&nbsp; AmpLocal Brand Awareness Campaign
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-label">Amount Spent</div>
+            <div class="stat-value">$271.09</div>
+            <div class="stat-sub">$10/day budget</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Link Clicks</div>
+            <div class="stat-value">778</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Cost per Click</div>
+            <div class="stat-value">$0.35</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Impressions</div>
+            <div class="stat-value">10,645</div>
+            <div class="stat-sub">6,197 unique reach</div>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <p>
+            The brand awareness campaign delivered
+            <strong>778 link clicks</strong> in August at
+            <strong>$0.35 per click</strong>, slightly up from July's $0.34 but
+            still well below industry benchmarks. The campaign reached
+            <strong>6,197 unique people</strong>, more than double the mid-month
+            pace reported on August 12. At $271 in total spend for the month,
+            Meta remains a cost-effective brand awareness channel, keeping CPI
+            visible to prospective patients alongside Google search efforts.
+          </p>
+        </div>
+      </div>
+
+      <!-- SEO -->
+      <div class="card">
+        <h2>SEO Performance</h2>
+        <p class="label" style="margin-bottom: 16px">
+          July 2026 Report &nbsp;|&nbsp;
+          <a href="https://cpi-2026-07-seo-report.vercel.app/" target="_blank"
+            >View Full SEO Report</a
+          >
+        </p>
+
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-label">Organic Sessions</div>
+            <div class="stat-value">16,049</div>
+            <div class="stat-sub">+209% YoY</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Organic Clicks</div>
+            <div class="stat-value">12,830</div>
+            <div class="stat-sub">+208% YoY</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">CTR</div>
+            <div class="stat-value">0.49%</div>
+            <div class="stat-sub">+26.7% improvement</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Avg. Position</div>
+            <div class="stat-value">7.0</div>
+            <div class="stat-sub">Stable vs. June</div>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-label">Form Submissions</div>
+            <div class="stat-value">99</div>
+            <div class="stat-sub">vs. 102 in June</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Form Starts</div>
+            <div class="stat-value">98</div>
+            <div class="stat-sub">vs. 96 in June</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Phone Calls</div>
+            <div class="stat-value">18</div>
+            <div class="stat-sub">+38.5% vs. June</div>
+          </div>
+        </div>
+
+        <h3>Key Wins</h3>
+        <ul>
+          <li>
+            <strong>CTR improved 26.7%</strong> through title and meta
+            description optimization, yielding 705 additional clicks.
+          </li>
+          <li>
+            <strong>"Masochist meaning" tripled clicks</strong> (38 to 114) as
+            the page position improved from 9.8 to 8.0.
+          </li>
+          <li>
+            <strong>Core glossary cluster compounding:</strong>
+            /masochistic-character (+29.9%), /double-bind (+52.1%),
+            /schizoid-personalities (+47.1%).
+          </li>
+          <li>
+            <strong>Phone calls from site</strong> increased 38.5% (13 to 18).
+          </li>
+        </ul>
+
+        <h3>Work Completed</h3>
+        <ul>
+          <li>
+            Created SEO-optimized blog content with schema markup and custom
+            imagery.
+          </li>
+          <li>Resolved duplicate meta tag issues across the site.</li>
+          <li>Fixed 6 broken internal links.</li>
+          <li>Updated schema hygiene and ran full site audit.</li>
+          <li>Submitted pages for re-indexing via Google Search Console.</li>
+        </ul>
+
+        <h3>Watchouts</h3>
+        <div class="note-box">
+          <ul>
+            <li>
+              Impressions declined 16.5% (2.64M), primarily in broad
+              definitional terms. However, target pages showed impression
+              growth.
+            </li>
+            <li>
+              Chicago-area sessions fell 26.4% while US overall grew 8.2%. The
+              60/90-day roadmap includes Chicago-specific optimization to
+              address the local market decline.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- IN THE PIPELINE -->
+      <div class="card">
+        <h2>In the Pipeline</h2>
+
+        <h3>Quarterly Google Ads Audit</h3>
+        <p>
+          The quarterly deep-dive audit is in progress. This review covers bid
+          strategies, keyword match types, negative keyword lists, ad copy
+          performance, and budget allocation across both campaigns. Optimization
+          scores currently sit at 59.7% and 61.6%, leaving meaningful room for
+          improvement. Recommendations will be included in the next report.
+        </p>
+
+        <h3>Archives Digitization Project</h3>
+        <p>
+          Not urgent. Potential fall start. Scope and timeline to be determined
+          in a future call.
+        </p>
+      </div>
+
+      <!-- NEXT STEPS -->
+      <div class="card">
+        <h2>Next Steps</h2>
+
+        <p>
+          No outstanding action items at this time. The quarterly Google Ads
+          audit is in progress and recommendations will be shared in the next
+          report.
+        </p>
+      </div>
+
+      <!-- PENDING ITEMS -->
+      <div class="card">
+        <h2>Pending Items</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Quarterly Google Ads Audit</td>
+              <td><span class="status-action">In Progress</span></td>
+              <td>
+                Deep-dive review of both campaigns. Recommendations to follow in
+                next report.
+              </td>
+            </tr>
+            <tr>
+              <td>Archives Project Scoping</td>
+              <td><span class="status-action">Discussed</span></td>
+              <td>
+                Not urgent. Potential fall start. Scope and timeline to be
+                determined in a future call.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
