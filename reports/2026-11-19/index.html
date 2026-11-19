@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPI Monthly Report - November 19, 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #131315;
+      background: #F0F0F0;
+      padding: 32px 16px;
+    }
+    .page { max-width: 800px; margin: 0 auto; }
+
+    .card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      border-left: 3px solid #FF70DB;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+      padding: 32px;
+      page-break-inside: avoid;
+    }
+    .card-header { border-left: none; padding: 32px 32px 24px; }
+
+    .header-logo { margin-bottom: 16px; }
+    .header-client { font-family: 'DM Serif Display', serif; font-size: 28px; color: #131315; margin-bottom: 4px; }
+    .header-type { font-family: 'Poppins', sans-serif; font-size: 16px; color: #909DA3; font-weight: 500; margin-bottom: 4px; }
+    .header-date { font-family: 'Roboto Mono', monospace; font-size: 13px; color: #909DA3; }
+    .header-line { border: none; border-top: 3px solid #FF70DB; margin-top: 20px; }
+
+    h2 { font-family: 'DM Serif Display', serif; font-size: 22px; color: #131315; margin-bottom: 16px; }
+    h3 { font-family: 'DM Serif Display', serif; font-size: 17px; color: #131315; margin-bottom: 12px; margin-top: 24px; }
+    h3:first-of-type { margin-top: 0; }
+
+    .label { font-family: 'Roboto Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #909DA3; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat-box { text-align: center; background: #F0F0F0; border-radius: 8px; padding: 16px 8px; }
+    .stat-label { font-family: 'Roboto Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px; color: #909DA3; margin-bottom: 4px; }
+    .stat-value { font-family: 'DM Serif Display', serif; font-size: 24px; color: #131315; }
+    .stat-sub { font-size: 11px; color: #909DA3; margin-top: 2px; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px; }
+    th { font-family: 'Roboto Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #909DA3; text-align: left; padding: 8px 10px; border-bottom: 2px solid #F0F0F0; }
+    td { padding: 10px; border-bottom: 1px solid #F0F0F0; }
+    tr:last-child td { border-bottom: none; }
+
+    .note-box { background: #F8F8F8; border-radius: 8px; padding: 20px; margin: 16px 0; }
+    .note-box p { margin-bottom: 10px; }
+    .note-box p:last-child { margin-bottom: 0; }
+
+    .highlight { background: #E8F0FE; font-weight: 600; border-radius: 3px; }
+    .highlight-good { background: #E6F4EA; font-weight: 600; border-radius: 3px; }
+    .highlight-warn { background: #FEF3F2; font-weight: 600; border-radius: 3px; }
+
+    .tag { font-family: 'Roboto Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 6px; border-radius: 3px; display: inline-block; vertical-align: middle; }
+    .tag-search { background: #E8F0FE; color: #1A56DB; }
+    .tag-meta { background: #E8F5E9; color: #1E8E3E; }
+    .tag-new { background: #FFF3E0; color: #E65100; }
+
+    p { margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+
+    a { color: #2079A0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    @media print { body { background: #fff; padding: 0; } .card { box-shadow: none; border: 1px solid #eee; page-break-inside: avoid; } }
+    @media (max-width: 600px) { .stat-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="card card-header">
+      <div class="header-logo">
+        <svg preserveAspectRatio="xMidYMid meet" overflow="visible" style="display: block; width: 48px; height: 48px;" viewBox="0 0 95.1219 94.794" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M71.3443 0.000195313H74.6538C85.9545 0.000195313 95.1219 9.13708 95.1219 20.4002V74.394C95.1219 85.6571 85.9545 94.794 74.6538 94.794H71.3443V0.000195313Z" fill="#131315"/>
+            <path d="M59.4555 22.3882V1.32169C59.4555 0.597633 58.8674 0 58.1294 0H23.7776C10.6434 0 0 10.608 0 23.6984V71.0953C0 84.1858 10.6434 94.7938 23.7776 94.7938H58.1294C58.8558 94.7938 59.4555 94.2076 59.4555 93.4721V72.4055C59.4555 71.6815 58.8674 71.0838 58.1294 71.0838H25.1037C24.3772 71.0838 23.7776 70.4977 23.7776 69.7621V60.5448C23.7776 59.8208 24.3657 59.2231 25.1037 59.2231H58.1294C58.8558 59.2231 59.4555 58.637 59.4555 57.9014V36.8349C59.4555 36.1108 58.8674 35.5132 58.1294 35.5132H25.1037C24.3772 35.5132 23.7776 34.927 23.7776 34.1915V24.9742C23.7776 24.2501 24.3657 23.6525 25.1037 23.6525H58.1294C58.8558 23.6525 59.4555 23.0663 59.4555 22.3308V22.3882Z" fill="#131315"/>
+          </g>
+        </svg>
+      </div>
+      <div class="header-client">Chicago Psychoanalytic Institute</div>
+      <div class="header-type">Monthly Report</div>
+      <div class="header-date">November 19, 2026 &nbsp;|&nbsp; Prepared by Earned Impact</div>
+      <hr class="header-line" />
+    </div>
+
+    <!-- GOOGLE ADS -->
+    <div class="card">
+      <h2>Google Ads</h2>
+      <p class="label" style="margin-bottom: 16px">November 1 to 18, 2026 MTD</p>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-label">Conversions</div>
+          <div class="stat-value">5</div>
+          <div class="stat-sub">Up from 4 last period</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Total Spend</div>
+          <div class="stat-value">$1,421</div>
+          <div class="stat-sub">Across 4 campaigns</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Total Clicks</div>
+          <div class="stat-value">1,270</div>
+          <div class="stat-sub">53.1K impressions</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Cost per Conv.</div>
+          <div class="stat-value">$284</div>
+          <div class="stat-sub">Down from $218</div>
+        </div>
+      </div>
+
+      <h3>Campaign Breakdown</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Campaign</th>
+            <th>Conv.</th>
+            <th>Clicks</th>
+            <th>Spend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Search - Adult Therapy Services <span class="tag tag-search" style="margin-left: 6px">Search</span></td>
+            <td class="highlight-good">2</td>
+            <td>567</td>
+            <td>$375.51</td>
+          </tr>
+          <tr>
+            <td>EI_CPI_Search_Barr-Harris <span class="tag tag-search" style="margin-left: 6px">Search</span></td>
+            <td class="highlight-good">2</td>
+            <td>170</td>
+            <td>$377.09</td>
+          </tr>
+          <tr>
+            <td>Child &amp; Adolescent Therapy <span class="tag tag-search" style="margin-left: 6px">Search</span></td>
+            <td class="highlight-good">1</td>
+            <td>365</td>
+            <td>$289.42</td>
+          </tr>
+          <tr>
+            <td>EI_CPI_Search_Transitional Life Stages <span class="tag tag-search" style="margin-left: 6px">Search</span> <span class="tag tag-new" style="margin-left: 4px">New</span></td>
+            <td>0</td>
+            <td>168</td>
+            <td>$378.60</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <p>Three of four campaigns are now converting. <strong>Adult Therapy Services</strong> continues to deliver at 2 conversions with the highest click volume (567). <strong>Barr-Harris</strong> produced 2 conversions, doubling its inaugural period. <strong>Child &amp; Adolescent Therapy</strong> picked up its first conversion this period after 365 clicks.</p>
+        <p><strong>Transitional Life Stages</strong> has not yet converted but is generating strong click volume (168) across its Family Dynamics and Young Adult Transitions ad groups, which saw significant growth compared to the prior period.</p>
+        <p><strong>Mobile</strong> continues to drive the majority of conversions (3 of 5) and accounts for 72.3% of total clicks ($1,113 in spend). Desktop generated 2 conversions from 335 clicks. 79% of clicks came through Google Search directly, with 21% from Search Partners.</p>
+      </div>
+
+      <h3>Top Keywords</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Clicks</th>
+            <th>Spend</th>
+            <th>CTR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chicago psychoanalytic institute</td>
+            <td>210</td>
+            <td>$79.56</td>
+            <td>33.72%</td>
+          </tr>
+          <tr>
+            <td>death of a loved one</td>
+            <td>130</td>
+            <td>$279.48</td>
+            <td>2.05%</td>
+          </tr>
+          <tr>
+            <td>therapist Chicago</td>
+            <td>127</td>
+            <td>$110.99</td>
+            <td>8.20%</td>
+          </tr>
+          <tr>
+            <td>therapist for family issues</td>
+            <td>91</td>
+            <td>$225.80</td>
+            <td>4.47%</td>
+          </tr>
+          <tr>
+            <td>stress management therapy</td>
+            <td>71</td>
+            <td>$32.94</td>
+            <td>1.63%</td>
+          </tr>
+          <tr>
+            <td>i need a therapist near me</td>
+            <td>55</td>
+            <td>$42.39</td>
+            <td>2.15%</td>
+          </tr>
+          <tr>
+            <td>therapy for relationship patterns</td>
+            <td>50</td>
+            <td>$93.34</td>
+            <td>4.72%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <p>The branded term "Chicago psychoanalytic institute" remains the highest-volume keyword at 210 combined clicks with a 33.72% CTR. The Barr-Harris campaign is pulling in highly relevant grief-related searches: "death of a loved one" (130 clicks), "child grief counseling" (18 clicks), and "family grief counseling" (16 clicks).</p>
+        <p>Chicago-local therapy terms ("therapist Chicago," "anxiety therapist Chicago," "psychotherapy Chicago") are generating consistent volume across campaigns, confirming strong local search demand.</p>
+      </div>
+    </div>
+
+    <!-- META ADS -->
+    <div class="card">
+      <h2>Meta (Facebook) Ads</h2>
+      <p class="label" style="margin-bottom: 16px">November 1 to 19, 2026 | Brand Awareness Campaign</p>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-label">Amount Spent</div>
+          <div class="stat-value">$186.51</div>
+          <div class="stat-sub">$10/day budget</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Link Clicks</div>
+          <div class="stat-value">619</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Cost per Click</div>
+          <div class="stat-value">$0.30</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Impressions</div>
+          <div class="stat-value">7,887</div>
+          <div class="stat-sub">4,685 unique reach</div>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <p>The brand awareness campaign delivered <strong>619 link clicks</strong> at <strong>$0.30 per click</strong>, continuing the downward CPC trend ($0.34 two periods ago, then $0.31 last period). The campaign reached <strong>4,685 unique people</strong> with 7,887 impressions on a $10/day budget. Meta continues to serve as a cost-effective top-of-funnel channel for driving brand visibility.</p>
+      </div>
+    </div>
+
+    <!-- COMBINED PAID -->
+    <div class="card">
+      <h2>Combined Paid Performance</h2>
+      <p class="label" style="margin-bottom: 16px">November 1 to 19, 2026 | Google + Meta</p>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-label">Conversions</div>
+          <div class="stat-value">5</div>
+          <div class="stat-sub">Google Ads (Meta is awareness)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Total Clicks</div>
+          <div class="stat-value">1,889</div>
+          <div class="stat-sub">1,270 Google + 619 Meta</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Total Spend</div>
+          <div class="stat-value">$1,607</div>
+          <div class="stat-sub">$1,421 Google + $187 Meta</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Cost per Conv.</div>
+          <div class="stat-value">$284</div>
+          <div class="stat-sub">Google Ads only</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEBSITE TRAFFIC -->
+    <div class="card">
+      <h2>Website Traffic</h2>
+      <p class="label" style="margin-bottom: 16px">November 1 to 19, 2026 | GA4</p>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-label">Total Sessions</div>
+          <div class="stat-value">30,454</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Engaged Sessions</div>
+          <div class="stat-value">14,828</div>
+          <div class="stat-sub">48.7% engagement rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Key Events</div>
+          <div class="stat-value">67</div>
+          <div class="stat-sub">0.2% session key event rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Avg Engagement</div>
+          <div class="stat-value">1m 05s</div>
+        </div>
+      </div>
+
+      <h3>Traffic by Channel</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Sessions</th>
+            <th>% of Total</th>
+            <th>Key Events</th>
+            <th>Key Event Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Search</strong></td>
+            <td class="highlight">19,679</td>
+            <td>64.62%</td>
+            <td class="highlight-good">26</td>
+            <td>0.12%</td>
+          </tr>
+          <tr>
+            <td>Direct</td>
+            <td>8,598</td>
+            <td>28.23%</td>
+            <td>15</td>
+            <td>0.16%</td>
+          </tr>
+          <tr>
+            <td>Paid Search</td>
+            <td>1,256</td>
+            <td>4.12%</td>
+            <td class="highlight-good">10</td>
+            <td class="highlight-good">0.80%</td>
+          </tr>
+          <tr>
+            <td>Referral</td>
+            <td>374</td>
+            <td>1.23%</td>
+            <td class="highlight-good">15</td>
+            <td class="highlight-good">3.21%</td>
+          </tr>
+          <tr>
+            <td>Organic Social</td>
+            <td>302</td>
+            <td>0.99%</td>
+            <td>0</td>
+            <td>0%</td>
+          </tr>
+          <tr>
+            <td>AI Assistant</td>
+            <td>138</td>
+            <td>0.45%</td>
+            <td>1</td>
+            <td>0.72%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <p><strong>Organic search has overtaken direct as the top traffic channel</strong>, now representing 64.62% of all sessions (19,679) with 26 key events. This is a significant shift from the prior report where direct traffic led at 57.48%. The October SEO report confirmed this trend: organic sessions grew 18.4% month over month, driven by existing blog content climbing in rankings rather than new publishing alone.</p>
+        <p><strong>Referral traffic</strong> continues to show the highest key event rate at 3.21% (15 key events from 374 sessions), consistent with last period. <strong>Paid Search</strong> generated 10 key events at a 0.80% rate, the second-highest converting channel.</p>
+        <p><strong>AI Assistant</strong> traffic continues to grow: 138 sessions (up from 85 last period) with a 62.32% engagement rate and 1 key event. CPI is being surfaced in AI search tools.</p>
+      </div>
+
+      <h3>Top Landing Pages</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Sessions</th>
+            <th>Key Events</th>
+            <th>Avg Engagement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>/ (homepage)</strong></td>
+            <td>1,804</td>
+            <td class="highlight-good">10</td>
+            <td>44s</td>
+          </tr>
+          <tr>
+            <td><strong>/blog/.../malignant-narcissism</strong></td>
+            <td>1,448</td>
+            <td>0</td>
+            <td class="highlight">2m 09s</td>
+          </tr>
+          <tr>
+            <td><strong>/treatment-center</strong></td>
+            <td>670</td>
+            <td class="highlight-good">4</td>
+            <td>32s</td>
+          </tr>
+          <tr>
+            <td><strong>/blog/.../repetition-compulsion</strong></td>
+            <td>499</td>
+            <td>0</td>
+            <td class="highlight">1m 22s</td>
+          </tr>
+          <tr>
+            <td><strong>/blog/.../masochistic-character</strong></td>
+            <td>447</td>
+            <td>0</td>
+            <td class="highlight">1m 06s</td>
+          </tr>
+          <tr>
+            <td><strong>/blog/.../borderline-personality-3</strong></td>
+            <td>432</td>
+            <td>0</td>
+            <td class="highlight">1m 28s</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note-box">
+        <p>The <strong>homepage</strong> leads key events with 10, up from 8 last period. <strong>Malignant narcissism</strong> remains the top content page with 1,448 sessions and 2m 09s average engagement. Blog content overall is driving significant organic traffic: five blog posts appear in the top 10 landing pages, all with engagement times over 1 minute.</p>
+        <p><strong>/treatment-center</strong> produced 4 key events from 670 sessions, up from 496 sessions last period, confirming it as a primary conversion page for people seeking therapy services.</p>
+      </div>
+    </div>
+
+    <!-- SEO -->
+    <div class="card">
+      <h2>SEO Performance</h2>
+      <p class="label" style="margin-bottom: 16px">October 2026 | <a href="https://cpi-2026-10-seo-report.vercel.app/">Full report</a></p>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-label">Organic Sessions</div>
+          <div class="stat-value">29,291</div>
+          <div class="stat-sub">Up 18.4% from September</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Search Clicks</div>
+          <div class="stat-value">22,314</div>
+          <div class="stat-sub">Up from 19,344</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">CTR</div>
+          <div class="stat-value">0.73%</div>
+          <div class="stat-sub">Up from 0.66%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Form Submissions</div>
+          <div class="stat-value">277</div>
+          <div class="stat-sub">Up from 214 in September</div>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <p>September was not a fluke. <strong>October went higher again.</strong> Organic sessions reached 29,291, impressions grew only 3.5%, so the growth came from ranking better on searches CPI already appeared in. Year over year, sessions went from 9,206 to 29,291 and clicks from 6,650 to 22,314.</p>
+        <p><strong>What moved it:</strong> The malignant narcissism post added 575 clicks (position moved from 4.2 to 2.8), August's posts are still climbing (interpretation of dreams, transference psychology, Eros and Thanatos), and October's ten new posts entered at positions 3.1 to 5.0. Posts take two to three months to reach their level, so the publishing cadence matters more than any single month's output.</p>
+      </div>
+    </div>
+
+    <!-- RECENTLY DELIVERED -->
+    <div class="card">
+      <h2>Recently Delivered</h2>
+
+      <h3>Barr-Harris Contact Audit</h3>
+      <p>A digital audit of Barr-Harris contact information across the web found <strong>14 websites showing outdated details</strong> (wrong phone, address, or name). The root cause: the old website (barrharris.org) is still live with 2018 info, and nearly every wrong listing copied from it. The old site has also been compromised with hidden spam links.</p>
+      <p>Four sites are under CPI's direct control and can be corrected immediately. Ten require outreach to third-party directories. The full audit with specific fix instructions for each listing is available at the link below.</p>
+      <p><a href="https://barrharris-contact-audit.vercel.app/">View full Barr-Harris contact audit</a></p>
+
+      <h3>Archival Audio Paywall Scoping</h3>
+      <p>A technical scoping report was delivered for selling access to CPI's audio archive from the existing WordPress site. The recommended approach uses MemberPress for access control and Cloudflare R2 for private audio storage, with year one platform costs of about $360. No technical blockers were found. Five decisions from CPI (archive size, pricing model, stream vs. download) will finalize the build and a fixed quote.</p>
+      <p><a href="https://cpi-audio-paywall.vercel.app/">View full audio paywall scoping report</a></p>
+
+      <h3>October SEO Report</h3>
+      <p>A full organic search performance report covering October 2026, documenting the second consecutive record-setting month for organic traffic. Includes detailed traffic analysis, visibility metrics, demand signals, and Chicago-specific search data.</p>
+      <p><a href="https://cpi-2026-10-seo-report.vercel.app/">View October SEO report</a></p>
+    </div>
+
+    <!-- IN THE PIPELINE -->
+    <div class="card">
+      <h2>In the Pipeline</h2>
+
+      <h3>Upcoming Campaigns</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Campaign</th>
+            <th>Channel</th>
+            <th>Target Launch</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Holiday Campaign</td>
+            <td>
+              <span class="tag tag-search">Google Ads</span>
+              <span class="tag tag-meta" style="margin-left: 4px">Meta</span>
+            </td>
+            <td>Start of December</td>
+          </tr>
+          <tr>
+            <td>New Year Campaign</td>
+            <td><span class="tag tag-search">Google Ads</span></td>
+            <td>Between Christmas and NYE</td>
+          </tr>
+          <tr>
+            <td>Seasonal Depression</td>
+            <td><span class="tag tag-search">Google Ads</span></td>
+            <td>Late January / Early February</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>SEO Roadmap</h3>
+      <ul>
+        <li><strong>URL consolidation:</strong> Redirect /double-bind-2/ to /double-bind/ and /emotional-masochism/ to /masochistic-character/ to resolve keyword cannibalization.</li>
+        <li><strong>Title and snippet rewrites</strong> for high-impression, low-click queries: "masochist meaning," "neurotic," "delusional," "paranoid," and "neuroticism."</li>
+        <li><strong>Chicago local markup:</strong> Add LocalBusiness and MedicalClinic schema to /adult-clinical-services/, /therapists/, and /programs-of-study/.</li>
+        <li><strong>GA4 key event setup (priority):</strong> Configure intake/consultation form submissions as a key event to connect ad campaigns to actual client inquiries.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
